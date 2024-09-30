@@ -1,0 +1,8 @@
+sapato = 50.50
+tênis X = 40.20
+tênis Y = 50.10
+camisa = 30.40
+calça = 40.40
+saia = 20.20
+chinelo = 10.0
+carteira = 70.10

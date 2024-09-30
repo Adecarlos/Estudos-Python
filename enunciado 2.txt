@@ -1,0 +1,41 @@
+Considere o código abaixo (a partir do `def main()`).
+Trate as possíveis exceções que podem ocorrer nesse código.
+A sua versão modificada deve:
+
+# Imprimir "Valor de a não pode ser convertido em número real",
+caso o usuário tente passar algo que não possa ser lido como real para
+o valor de a. Mensagens análogas devem ser impressas para b e c.
+
+# Imprimir "Equação não tem soluções reais." caso o valor de delta
+seja negativo.
+
+Lembre que isso deve ser tratado como exceções: use try/except/else/finally/raise.
+
+Enviar o código (que possa ser executado diretamente) em um arquivo chamado ex_2_<NOME_COMPLETO>.txt
+
+
+def main():
+ a, b, c = obter_coef_eq_usuario()
+ x1, x2 = fazer_a_conta(a, b, c)
+ imprimir_resultado(x1, x2)
+
+# --------------------------------------------
+import math
+
+def obter_coef_eq_usuario():
+ a = float(input('Digite o valor de a:'))
+ b = float(input('Digite o valor de b:'))
+ c = float(input('Digite o valor de c:'))
+ return a, b, c
+
+def fazer_a_conta(a, b, c):
+ delta = b**2 - 4*a*c
+ x1 = (-b + math.sqrt(delta))/(2*a)
+ x2 = (-b - math.sqrt(delta))/(2*a)
+ return x1, x2
+
+def imprimir_resultado(x1, x2):
+ print('As soluções são', x1, "e", x2)
+ 
+if __name__ == '__main__':
+ main()

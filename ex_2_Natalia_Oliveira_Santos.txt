@@ -1,0 +1,34 @@
+import math
+
+def main():
+    try:
+        a, b, c = obter_coef_eq_usuario()
+        x1, x2 = fazer_a_conta(a, b, c)
+        imprimir_resultado(x1, x2)
+    except ValueError:
+        print("Valor de a, b ou c não pode ser convertido em número real.")
+    except Exception as e:
+        print(f"Ocorreu um erro inesperado: {e}")
+
+def obter_coef_eq_usuario():
+    try:
+        a = float(input('Digite o valor de a:'))
+        b = float(input('Digite o valor de b:'))
+        c = float(input('Digite o valor de c:'))
+        return a, b, c
+    except ValueError:
+        raise ValueError("Valor de a, b ou c não pode ser convertido em número real.")
+
+def fazer_a_conta(a, b, c):
+    delta = b**2 - 4*a*c
+    if delta < 0:
+        raise ValueError("Equação não tem soluções reais.")
+    x1 = (-b + math.sqrt(delta))/(2*a)
+    x2 = (-b - math.sqrt(delta))/(2*a)
+    return x1, x2
+
+def imprimir_resultado(x1, x2):
+    print('As soluções são', x1, "e", x2)
+
+if __name__ == '__main__':
+    main()

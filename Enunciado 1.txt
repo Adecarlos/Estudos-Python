@@ -1,0 +1,20 @@
+Crie um código que leia um arquivo como o "mercadorias.txt" e fornece:
+o item com maior preço
+o item com menor preço
+a média de todos os preços
+
+Escreva a sua solução em um arquivo cujo nome é ex_arquivos_<nomecompleto>.py
+(Por exemplo, o meu arquivo se chamaria ex_arquivos_Yuri_Alexandre_Aoto.py);
+
+Se o arquivo mercadorias contiver o seguinte:
+
+sapato = 10.00
+tênis = 15.00
+sandália = 5.00
+
+o segunte comportamento deve acontecer, ao executarmos o código:
+
+$ python3 ex_arquivos_Yuri_Alexandre_Aoto.py
+Item mais caro: tênis (custa R$ 15.00)
+Item mais barato: sandália (custa R$ 5.00)
+Média de preços: 10.00
